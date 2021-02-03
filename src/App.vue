@@ -1,25 +1,27 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Dc Heros</h1>
+  <ul>
+    <li v-for="(hero, index) in dcHeros" :key="index">
+      {{ index }} : {{ hero.name }}
+    </li>
+  </ul>
+  <input :value="newHero" />
+  <button :disabled="isDisabled">Add Hero</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      isDisabled: false,
+      newHero: "Aquaman, Reloaded",
+      dcHeros: [
+        { name: "SuperGirl" },
+        { name: "Flash" },
+        { name: "Batman" },
+        { name: "Arrow" }
+      ]
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
