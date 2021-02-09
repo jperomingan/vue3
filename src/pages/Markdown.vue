@@ -14,30 +14,6 @@
 import marked from 'marked';
 import debounce from '../utilities/mixins/debounce';
 export default {
-    // beforeCreate(){
-    //     console.log('before create');
-    // },
-    // created(){
-    //     console.log('created');
-    // },
-    // beforeMount(){
-    //     console.log('before mount');
-    // },
-    // mounted(){
-    //     console.log('mounted');
-    // },
-    // beforeUnmount(){
-    //     console.log('before unmount');
-    // },
-    // unmounted(){
-    //     console.log('unmounted');
-    // },
-    beforeUpdate(){
-        console.log('before update')
-    },
-    updated(){
-        console.log('updated')
-    },
     mixins: [debounce],
     data() {
         return {
